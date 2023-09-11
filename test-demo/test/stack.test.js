@@ -12,10 +12,16 @@ class Stack {
 
 describe('My Stack', () => {
 
-    it('is created empty');
+    it('is created empty', () => {
+        const stack = new Stack();
 
-    it('can push to the top');
+        expect(stack.top).toBe(-1); //toBe matcher - looks for referential equality between two objects
+        //two different objects in memory
+        expect(stack.items).toEqual({}); //toEqual - checks for value equality instead of obj reference itself
+    });
 
-    it('can pop off');
+    it.todo('can push to the top');
+
+    it.todo('can pop off');
 
 })
